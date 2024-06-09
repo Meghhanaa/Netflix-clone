@@ -1,0 +1,548 @@
+// .nav__logo{
+//   width: 100px;
+// }
+
+// .btn{
+//   width: auto;
+//   height: auto;
+// }
+
+// @media (max-width: 768px) {
+//   .btn{
+//     font-size: 15px;
+//     width: 100px;
+//     padding: 8px 16px; 
+    
+//   }
+// }
+
+/* Base button size */
+// .btn {
+//   padding: 0.2em 0.1em; /* Use 'em' units for padding */
+//   font-size: 1em; /* Base font size relative to the btn */
+// }
+
+// /* Smaller screens (e.g., mobile devices) */
+// @media (max-width: 600px) {
+//   .btn {
+//     padding: 0.8em 1.6em; /* Smaller padding for smaller screens */
+//     font-size: 0.875em; /* Smaller font size for smaller screens */
+//   }
+// }
+
+// /* Larger screens (e.g., desktops) */
+// @media (min-width: 1024px) {
+//   .btn {
+//     padding: 0.8em 2em; /* Larger padding for larger screens */
+//     font-size: 1.125em; /* Larger font size for larger screens */
+//   }
+// }
+
+
+.nav__logo {
+  margin-left: 100%;
+  width:11vw; /* Adjust the size of the logo based on viewport width */
+  max-width: 200px; /* Maximum size of the logo */
+  min-width: 80px; /* Minimum size of the logo */
+}
+
+@media (max-width: 768px) {
+  .nav__logo {
+    margin-left: 4%;
+    width: 20vw; 
+  }
+}
+
+// Top nav bar
+.topNav{
+  // margin-left: 50px;
+  margin-right: 50px;
+  position: absolute;
+  width: 100%;
+  background: linear-gradient(180deg, black, transparent);
+  z-index: 10;
+  select{
+    background: rgba(0,0,0,.4);
+    border: 1px solid #aaa;
+    color: #fff;
+    font-size: .875rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-right: 20px;
+  }
+}
+
+.megh-nav{
+  height: 15vh;
+  margin-right: 10%;
+  width: 25vw;
+}
+
+@media (max-width: 768px) {
+  .megh-nav {
+    height: 5vh;
+    margin-right: 15%;
+    width: 35vw; 
+  }
+}
+
+@media (max-width: 350px) {
+  .megh-nav {
+    height: 30px;
+    margin-right: 10%;
+    width: 15vw; 
+  }
+}
+
+// home banner
+.home-banner{
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  // height: auto;
+  h1{
+    font-size: 3.125rem;
+    font-weight: 750;
+  }
+  h2{
+    font-size: 1.625rem;
+  }
+  // .shadow{
+  //   background-color: rgba(0,0,0,.4);
+  //   opacity: 0.6;
+  //   position: absolute;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  // }
+  // img{
+  //   max-width: 100%;
+  // }
+  .shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    opacity: 0.6;
+    z-index: 1;
+  }
+  
+  .shadow::before {
+    content: '';
+    // background-image: url('path-to-your-image.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* Set the desired opacity for the background image */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .shadow::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Black with 50% opacity */
+    z-index: 1;
+  }
+  
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
+    z-index: -2; /* Ensure the image is behind the shadow */
+  }
+  /* Base styles */
+  .our-story {
+    margin: 10px;
+    flex-basis: 50%;
+    padding: 0;
+    z-index: 10;
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Use percentage for responsive width */
+  }
+    
+
+  .input-group {
+    margin-left: 30%;
+    width: 50%;
+    input {
+    margin-right: 5px;
+    height: 54px;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: none;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  input::placeholder {
+    color: #fff; 
+    opacity: 1;
+  }
+
+  input:focus {
+    border-color: none; 
+    box-shadow: 0 0 5px rgba(48, 51, 50, 0.5); 
+  }
+
+  button{
+    font-size: 1.3rem;
+    padding: .2rem 1rem;
+    border: 0;
+    height: 54px;
+    font-weight: normal;
+  }
+
+  /* Media query for tablets */
+  @media (max-width: 600px) {
+    .our-story {
+      width: 90%; /* Increase width for smaller devices */
+      top: 30%; /* Adjust position */
+    }
+
+    .button{
+      font-size: 1rem;
+      padding: .2rem 1rem;
+      border: 0;
+      // height: 50px;
+    }
+  }
+
+  /* Media query for mobile phones */
+  @media (max-width: 480px) {
+    .our-story {
+      width: 95%; /* Increase width for smaller devices */
+      top: 25%; /* Adjust position */
+    }
+
+    .input-group input {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
+  }
+  }
+}
+
+// Login Page
+.login{
+  height: 100vh;
+  overflow: hidden;
+
+  .head-01{
+    font-weight: 650;
+  }
+
+  .holder{
+    padding: 60px 68px 40px;
+    color: #fff;
+    opacity: 1;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    min-height: 460px;
+    width: 450px;
+    position: absolute;
+    z-index: 1;
+    margin-top: 10%;
+    left: calc(50% - 225px);outline: none;
+    backdrop-filter: blur(5px); 
+    -webkit-backdrop-filter: blur(5px); 
+
+
+    input{
+      background-color: rgba(51, 51, 51, 0.5);
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      color: #fff;
+      // backdrop-filter: blur(5px);
+    }
+    input::placeholder {
+      color: #fff; 
+      opacity: 1;
+    }
+
+    .password{
+      position: relative;
+      padding-right: 40px;
+    }
+
+    .password-eye-button {
+      position: absolute;
+      right: 20%;
+      top: 13.4rem;
+      transform: translateY(-50%);
+      border: none;
+      background: none;
+      cursor: pointer;
+      /* Adjust the size of the icon if necessary */
+      font-size: 1.25rem;
+    }
+    
+    .text-danger {
+      color: #dc3545; /* Bootstrap's default danger color */
+      margin-top: 5px;
+      font-size: 0.875rem;
+    }
+
+    .remember{
+      margin: 20px 0 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .holder {
+      padding: 30px 34px 20px; /* Smaller padding */
+      min-height: 230px;
+      width: 60%; /* Adjust width to be percentage-based */
+      margin: 20%;
+      margin-right: 30%;
+    }
+  }
+
+  .shadow{
+    background-color: rgba(0,0,0,.4);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  img{
+    max-width: 100%;
+  }
+  .login-form-other{
+    .login-signup-now {
+      color: #737373;
+      font-size: 16px;
+      font-weight: 500;
+      margin-top: 16px;
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+
+// @media (max-width: 786px) {
+//   .login{
+//     height: 80vh;
+//     overflow: hidden;
+//   }
+// }
+
+// Banner
+.banner {
+  background-image: url("../src/stranger.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: #000;
+  height: 600px;
+  object-fit: contain;
+  position: relative;
+
+  .banner__contents {
+    height: 190px;
+    margin-left: 30px;
+    padding-top: 140px;
+  }
+  
+  .banner__title {
+    margin-top: 70px;
+    font-size: 3rem;
+    font-weight: 800;
+    padding-bottom: 0.3rem;
+  }
+  
+  .banner__description {
+    // margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    height: 80px;
+    line-height: 1.3;
+    line-height: 24px;
+    max-width: 360px;
+    padding-top: 1rem;
+    width: 45rem;
+  }
+  
+  .banner__button-01 {
+    background-color: red;
+    border: none;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 1rem;
+    outline: none;
+    padding: 0.5rem 2rem;
+  }
+  
+  .banner__button-01:hover {
+    background-color: #e6e6e6;
+    color: #000;
+    transition: all 0.2s;
+  }
+
+  .banner__button-02 {
+    background-color: #e6e6e6;
+    border: none;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    font-weight: 700;
+    margin-right: 1rem;
+    outline: none;
+    padding: 0.5rem 2rem;
+  }
+  
+  .banner__button-02:hover {
+    background-color: red;
+    color: #000;
+    transition: all 0.2s;
+  }
+
+  .banner__button-03 {
+    margin-top: 40px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.2vw;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 700;
+    margin-right: 1rem;
+    outline: none;
+    padding: 0.5rem 2rem;
+  }
+  
+  .banner__button-03:hover {
+    background-color: red;
+    color: #000;
+    transition: all 0.2s;
+  }
+  
+  .banner--fadeBottom {
+    background-image: linear-gradient(
+      180deg,
+      transparent,
+      rgba(37, 37, 37, 0.61),
+      #111
+    );
+    height: 7.4rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+
+// List
+.list{
+  .row{
+    flex-direction: column;
+    margin: 0;
+  }
+  .title{
+    margin: 30px;
+    margin-bottom: 0;
+  }
+  
+  // .row__posters {
+  //   // max-height: 550px;
+  //   display: flex;
+  //   overflow-x: scroll;
+  //   overflow-y: hidden;
+  //   padding: 20px 0 20px 0;
+  // }
+  
+  .row__posters::-webkit-scrollbar {
+    display: none;
+  }
+  
+//   .row__poster {
+//     margin-right: 10px;
+//     max-height: 200px;
+//     height: auto;
+//     object-fit: contain;
+//     opacity: 0.8;
+//     transition: transform 0.45s;
+//     max-width: 300px;
+//     width: 100%;
+//   }
+  
+//   .row__poster:hover {
+//     cursor: pointer;
+//     opacity: 1;
+//     transform: scale(1.08);
+//   }
+  
+//   .row__posterLarge {
+//     // max-height: 500px;
+//   }
+  
+//   .row__posterLarge:hover {
+//     opacity: 1;
+//     transform: scale(1.09);
+//   }
+// }
+
+.row__poster {
+  margin-right: 10px;
+  max-height: 350px; /* Maximum height */
+  height: auto; /* Adjust height automatically based on width to maintain aspect ratio */
+  max-width: 100px; /* Maximum width */
+  width: 100%; /* Adjust width to be responsive */
+  object-fit: contain; /* Adjust the object fit to contain the image within the box */
+  opacity: 0.8;
+  transition: transform 0.45s;
+  flex-shrink: 0;
+}
+
+.row__posterLarge {
+  max-height: 350px; /* Maximum height for large posters */
+  height: auto; /* Adjust height automatically based on width to maintain aspect ratio */
+  max-width: 100px; /* Maximum width for large posters */
+  width: 100%; /* Adjust width to be responsive */
+}
+
+/* Keep the hover effects the same */
+.row__poster:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.row__posterLarge:hover {
+  opacity: 1;
+  transform: scale(1.09);
+}
+
+.row__posters {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-y: hidden; /* Prevents vertical scrolling */
+  padding: 20px 0 20px 0;
+  /* Other styles */
+}
+
+/* Hide the scrollbar for aesthetic purposes */
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+}
